@@ -41,7 +41,7 @@ const BentoTilt = ({children , className=''})=>{
 }
 
 
-const BentoCard =({src, title , description , isComingSoon})=>{
+const BentoCard =({src, title , description })=>{
 
     return(
         <div className='relative size-full'>
@@ -71,9 +71,9 @@ const Features = () => {
     <section className='bg-black pb-52'>
     <div className='container mx-auto px-3 md:px-10'>
         <div className='px-5 py32'>
-            <p className='font-circular-web text-lg text-blue-50'>Immerse Yourself in Music</p>
+            <p className='font-circular-web text-lg text-blue-50 pt-10  '>Immerse Yourself in Music</p>
         
-        <p className='max-w-md font-circular-web text-lg text-blue-50'>
+        <p className='max-w-md font-circular-web text-lg text-blue-50 pb-10'>
 
         DoReMiPa is the official annual inter-college music competition of Delhi Technological University(DTU) organized by Madhurima - the music society of DTU, which is held under ENGIFEST- the largest cultural fest of north India. DoReMiPa includes six musical competitions that showcase a diverse array of musical styles, encompassing Indian, Western, and Instrumental genres and draws participation from all major colleges in the Delhi NCR as well as other parts of India. 
         </p>
@@ -86,10 +86,8 @@ const Features = () => {
 
         <BentoCard 
             src="videos/feature-1.mp4"
-            title={<>Radi<b>N</b>t</>}
+            title={<>Placeholder</>}
             description="Check out the featured Artist here"
-            isComingSoon
-            
         />
 
     </BentoTilt>
@@ -99,14 +97,14 @@ const Features = () => {
 
         <BentoCard 
             src="videos/feature-2.mp4"
-            title={<>Alumi<b>n</b>i</>}
+            title={<>Placeholder</>}
             description="Check out our ol' Uncs or some shii bro ong"
         />
         </BentoTilt>
         <BentoTilt className='bento-tilt_1 row-span-1 ms-32 md:col-span-1 md:ms-0'>
             <BentoCard 
                 src="videos/feature-3.mp4"
-                title={<><b>E</b>vents</>}
+                title={<>Placeholder</>}
                 description="hella lit here and there or sumn type"
             />
         </BentoTilt>
@@ -115,7 +113,7 @@ const Features = () => {
         <BentoTilt className='bento-tilt_1 me-14 md:col-span-1 md:me-0'>
             <BentoCard 
                 src="videos/feature-4.mp4"
-                title={<>Our <b>B</b>igDawgs</>}
+                title={<>Placeholder</>}
                 description="hella lit here and there or sumn type"
             />
         </BentoTilt>
@@ -127,7 +125,7 @@ const Features = () => {
                 <TiLocationArrow className='m-5 scale-[5] self-end'/>
             </div>
         </BentoTilt>
-
+        <BentoTilt className='bento-tilt_2'>
         <div className='bento-tilt_2'>
             <video 
                 src='videos/feature-5.mp4'
@@ -137,6 +135,7 @@ const Features = () => {
                 className='size-full objct-cover object-center'
             />
         </div>
+        </BentoTilt>
     </div>
     </div>
 

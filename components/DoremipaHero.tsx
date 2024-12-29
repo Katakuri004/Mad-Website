@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import React from "react";
 import { ImagesSlider } from "./ui/images-slider";
 
+
 export default function DoremipaHero() {
     const images = [
         "/img/aboutcover1.png",
@@ -11,7 +12,7 @@ export default function DoremipaHero() {
         "/img/aboutcover4.png",
         "/img/aboutcover5.png",
       ];
-    
+
   return (
     <ImagesSlider className="h-[50rem]" images={images}>
       <motion.div
@@ -32,7 +33,16 @@ export default function DoremipaHero() {
           Do Re Mi Pa
         </motion.p>
         <button className="px-4 py-2 backdrop-blur-sm border bg-emerald-300/10 border-emerald-500/20 text-white mx-auto text-center rounded-full relative mt-4">
-          <span>Check Out Our Events →</span>
+          <span
+          onClick={() => {
+            const target = document.getElementById("eventSection");
+            if (target) {
+              target.scrollIntoView({ behavior: "smooth" , block: "start" });
+            }else{
+              console.log('target not found')
+          }}}
+           
+          >Check Out Our Events →</span>
           <div className="absolute inset-x-0  h-px -bottom-px bg-gradient-to-r w-3/4 mx-auto from-transparent via-emerald-500 to-transparent" />
         </button>
       </motion.div>

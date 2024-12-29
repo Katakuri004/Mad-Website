@@ -1,10 +1,6 @@
 "use client";
-import TextGraident from '@/components/ui/gradientText';
 import AnimatedTitle from '@/components/AnimatedTitle';
 import LayoutGridAbout from '@/components/LayoutGrid';
-import React, { useState, useRef, useEffect } from "react";
-import { LayoutGrid } from '@/components/ui/layout-grid';
-
 import FocusCardsBanner from '@/components/Focuscard';
 import { TextHoverEffect } from "@/components/ui/text-hover-effect";
 

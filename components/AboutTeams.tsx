@@ -1,19 +1,20 @@
 'use client';
-import { motion } from "framer-motion";
-import React, { useState } from "react";
-import Button from "./ui/Button";
-import { TiLocationArrow } from "react-icons/ti";
+
+import { motion } from 'framer-motion';
+import React, { useState } from 'react';
+import Button from './ui/Button';
+import { TiLocationArrow } from 'react-icons/ti';
 
 export default function ImagesSliderDemo() {
   const images = [
-    "/img/aboutcover1.png",
-    "/img/aboutcover2.png",
-    "/img/aboutcover3.png",
-    "/img/aboutcover4.png",
-    "/img/aboutcover5.png",
+    '/img/aboutcover1.png',
+    '/img/aboutcover2.png',
+    '/img/aboutcover3.png',
+    '/img/aboutcover4.png',
+    '/img/aboutcover5.png',
   ];
 
-  const band = ["Duality", "Dhoomketu", "Darya", "Acapella", "Choir"];
+  const band = ['Duality', 'Dhoomketu', 'Darya', 'Acapella', 'Choir'];
 
   const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -22,29 +23,30 @@ export default function ImagesSliderDemo() {
   };
 
   const handlePrevSlide = () => {
-    setCurrentSlide((prev) =>
-      prev === 0 ? images.length - 1 : prev - 1
-    );
+    setCurrentSlide((prev) => (prev === 0 ? images.length - 1 : prev - 1));
   };
 
   const handleSlideSelect = (index: number) => {
     setCurrentSlide(index);
   };
 
+  const handleLearnMoreClick = () => {
+
+    const targetUrl = `/about/${band[currentSlide].toLowerCase()}`;
+    window.open(targetUrl, '_blank');
+  };
+  
+
   return (
     <div className="h-screen w-full relative bg-black text-white overflow-hidden">
-      {/* Background Image */}
       <div
         className="absolute inset-0 w-full h-full bg-cover bg-center transition-all duration-700"
         style={{
           backgroundImage: `url(${images[currentSlide]})`,
         }}
       />
-
-      {/* Overlay for better text visibility */}
       <div className="absolute inset-0 bg-black bg-opacity-40" />
 
-      {/* Text and Button Content */}
       <motion.div
         initial={{ opacity: 0, y: -80 }}
         animate={{ opacity: 1, y: 0 }}
@@ -54,7 +56,7 @@ export default function ImagesSliderDemo() {
         <motion.p
           className="font-bold text-2xl md:text-6xl text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 py-4 transform transition-transform duration-300 hover:scale-110"
         >
-          {band[currentSlide]} {/* Syncs with the current slide */}
+          {band[currentSlide]}
         </motion.p>
         <div className="relative mt-4">
           <Button
@@ -62,12 +64,12 @@ export default function ImagesSliderDemo() {
             title={`Learn More About ${band[currentSlide]}`}
             rightIcon={<TiLocationArrow />}
             containerClass="bg-blue-50 md:flex items-center justify-center gap-1 px-4 py-2 rounded-full hover:bg-yellow-400 hover:text-white transition duration-300"
+            onClick={handleLearnMoreClick}
           />
           <div className="absolute inset-x-0 h-px -bottom-px bg-gradient-to-r w-3/4 mx-auto from-transparent via-emerald-500 to-transparent" />
         </div>
       </motion.div>
 
-      {/* Pagination */}
       <div className="absolute bottom-10 inset-x-0 flex justify-center items-center space-x-4 z-50">
         {images.map((_, index) => (
           <button
@@ -80,7 +82,6 @@ export default function ImagesSliderDemo() {
         ))}
       </div>
 
-      {/* Navigation Buttons */}
       <div className="absolute inset-y-0 left-5 flex items-center z-50">
         <button
           onClick={handlePrevSlide}

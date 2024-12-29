@@ -1,7 +1,6 @@
 'use client';
 import React from 'react';
 import { useState , useRef } from 'react';
-import { TiLocationArrow } from 'react-icons/ti';
 
 const BentoTilt = ({children , className=''})=>{
     
@@ -41,7 +40,7 @@ const BentoTilt = ({children , className=''})=>{
 }
 
 
-const BentoCard =({src, title , description , isComingSoon})=>{
+const BentoCard =({src, title , description })=>{
 
     return(
         <div className='relative size-full'>
@@ -88,7 +87,7 @@ const DoremipaFeatures = () => {
             src="videos/feature-1.mp4"
             title={<>Participating Colleges</>}
             description="100+ Collegese take part in a myriad of Events Organised"
-            isComingSoon
+            
             
         />
 

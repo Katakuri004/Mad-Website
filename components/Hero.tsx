@@ -17,7 +17,6 @@ const Hero = () => {
   
 
   const totalVideos = 4;
-  const currentVideoRef = useRef(null);
   const nextVideoRef = useRef(null);
 
   const handleVideoLoad = () => {
@@ -137,14 +136,15 @@ const Hero = () => {
                         MADHURIMA
                     </h1>
                     <p className='mb-5 max-w-64 font-robert-regular text-blue-100'>
-                        Hello put some filler here <br />join us or some shit
+                        Hello put some filler here <br />join us.
                     </p>
 
                     <Button  
                         id='watch-trailer'
-                        title="watch Trailer"
+                        title="Youtube"
                         leftIcon={<TiLocationArrow/>}
                         containerClass="!bg-yellow-300 flex-center gap-1"
+                        onClick={() => window.open("https://www.youtube.com/@MadhurimaDTU/videos", "_blank")}
                     />
                 </div>
             </div>

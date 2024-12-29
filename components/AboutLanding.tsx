@@ -17,7 +17,6 @@ const Hero = () => {
   
 
   const totalVideos = 4;
-  const currentVideoRef = useRef(null);
   const nextVideoRef = useRef(null);
 
   const handleVideoLoad = () => {
