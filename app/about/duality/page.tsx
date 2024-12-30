@@ -2,7 +2,6 @@ import React from 'react';
 import TextGraident from '@/components/ui/gradientText';
 import AnimatedTitle from '@/components/AnimatedTitle';
 import LayoutGridAbout from '@/components/LayoutGrid';
-import AnimatedTooltip from '@/components/Tooltip';
 import FocusCardsBanner from '@/components/Focuscard';
 
 const page = () => {
