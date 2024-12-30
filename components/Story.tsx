@@ -55,7 +55,6 @@ const Story: React.FC = () => {
         <div className="relative size-full">
           <AnimatedTitle
             title="Story of Madhurima Through its People."
-            sectionId="#story"
             containerClass="mt-5 pointer-events-none mix-blend-difference relative z-10"
           />
 
@@ -105,8 +104,10 @@ const Story: React.FC = () => {
         <div className="-mt-80 flex w-full justify-center md:-mt-64 md:me-44 md:justify-end">
           <div className="flex h-full w-fit flex-col items-center md:items-start">
             <p className="mt-3 max-w-sm text-center font-circular-web text-violet-50 md:text-start">
-              Where blah blah blah blah lorem ispum lmao fr fr fr type shhiiiiiiiiiiiiiii lol idk i have an exam tomorrow why
-              aint i studying anf making this lmao , vac ka paper jai kisko farak padta hai, padta toh isse bhi nahi but idk idc.smh
+              Where blah blah blah blah lorem ispum lmao fr fr fr type
+              shhiiiiiiiiiiiiiii lol idk i have an exam tomorrow why aint i
+              studying and making this lmao, vac ka paper jai kisko farak padta
+              hai, padta toh isse bhi nahi but idk idc.smh
             </p>
 
             <Button
